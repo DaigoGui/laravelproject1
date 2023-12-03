@@ -1,0 +1,179 @@
+/* Add this to your styles.css file */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures that the content takes at least the full height of the viewport */
+  }
+  .navbar {
+    background-color: #f4428f !important; /* Set navbar background color */
+    color: #fff;
+  }
+  .navbar 
+  .popup-container {
+              display: none;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              padding: 20px;
+              background-color: #f4428f;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              z-index: 1000;
+              transition: transform 0.5s ease-in-out;
+          }
+  
+          .overlay {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.5);
+              z-index: 900;
+          }
+  
+          .btn-container {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 10px;
+             
+          }
+  
+          .flip {
+              transform: translate(-50%, -50%) rotateY(180deg);
+          }
+  /* The rest of your styles... */
+  
+  /* Add this to your styles.css file */
+  .carousel {
+    height: 150%;
+  }
+  
+  .carousel-inner img {
+    max-height: 650px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Add this to your styles.css file */
+  .carousel-inner {
+    position: relative;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Adjust the text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 10px; /* Rounded edges */
+  }
+  
+  .carousel-caption h2 {
+    font-size: 4em; /* Adjust the font size */
+     margin: 0; /* Remove default margin */
+     padding: 10px; /* Adjust the padding as needed */
+  }
+  
+  .carousel-caption p {
+    font-size: 1.2em; /* Adjust the font size */
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Adjust the padding as needed */
+  }
+  
+  .carousel-caption button {
+    font-size: 1.2em; /* Adjust the font size */
+    background-color: #f4428f; /* Adjust the background color */
+    color: #ffffff; /* Adjust the text color */
+    border: none;
+    padding: 10px 20px; /* Adjust the padding as needed */
+    cursor: pointer;
+    border-radius: 10px; /* Rounded edges */
+  }
+  
+  .carousel-caption button:hover {
+    background-color: #f4aed7; /* Adjust the hover background color */
+    color: black bold;
+  }
+  
+  
+  
+  
+  /* Add this to your styles.css file */
+  .author-circles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .author-circle {
+      width: 100px; /* Adjust the width as needed */
+      height: 100px; /* Adjust the height as needed */
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 10px; /* Adjust the margin as needed */
+    }
+    
+    .author-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    
+    /* Add this to your styles.css file */
+  .author-circles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .author-circle {
+    position: relative;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px; /* Adjust the margin as needed */
+  }
+  
+  .author-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .author-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
+    color: #fff; /* Adjust the text color */
+    padding: 5px;
+    font-size: 12px; /* Adjust the font size */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .author-circle:hover .author-name {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .footer {
+    background-color: #f4428f; /* Set footer background color */
+    color: #fff; /* Set text color for better visibility */
+  display: inline;
+  }
+  
+  
+  
+  

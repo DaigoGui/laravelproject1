@@ -1,0 +1,119 @@
+/* Add this to your styles.css file */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures that the content takes at least the full height of the viewport */
+  }
+  .navbar {
+    background-color: #f4428f !important; /* Set navbar background color */
+    color: #fff;
+  }
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 40%;
+    display: cover;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Ensure the text is above the image */
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 10px;
+    transform: translate(-0%, -50%);
+  }
+  
+  /* Rest of your styles */
+  
+  
+  /* FAQ Section */
+  .faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  .faq-item p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  /* Question Submission Form */
+  .question-form {
+    text-align: justify;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #f4428f;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #d73173;
+  }
+  
