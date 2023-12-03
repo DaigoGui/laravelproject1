@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BooksController;
+
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,38 +15,11 @@ use App\Http\Controllers\BooksController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::resource('books', BooksController::class);
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('/community', function () {
-    return view('community');
-});
-
-// Route::Post('questions', 'QuestionController');
-
-
-// Login
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-
-// Logout
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
-
-
-
-
-
-
-Route::get('/books', [BooksController::class, 'index'])->name('books.index');
-
-
-
+})->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -59,4 +32,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-

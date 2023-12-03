@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}"> <!-- Add your custom CSS file -->
-    <title>Home</title>
+    <title>Dashboard</title>
 </head>
 <body>
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-   <button class="btn btn-primary" onclick="window.location.href='/login'">Login</button>
-   <button class="btn btn-primary" onclick="window.location.href='/register'">Register</button>
+    @auth
+    <span class="navbar-text">
+        Welcome, {{ Auth::user()->name }}!
+    </span>
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" class="btn btn-link">Logout</button>
+    </form>
+        @else
+            <button class="btn btn-primary" onclick="window.location.href='/login'">Login</button>
+            <button class="btn btn-primary" onclick="window.location.href='/register'">Register</button>
+        @endauth
 
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,15 +92,6 @@
     </div>
 </div>
 
-<h1>All Books</h1>
-
-    @foreach ($books as $book)
-        <p>
-            <a href="{{ route('books.show', ['book' => $book->id]) }}">
-                {{ $book->title }} by {{ $book->author }}
-            </a>
-        </p>
-    @endforeach
 
 
 {{-- <x-layout>

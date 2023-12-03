@@ -13,15 +13,14 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 100);
-            $table->string('author', 50);
-            $table->string('genre', 50);
-            $table->integer('published_year');
+            $table->string('Title', 100);
+            $table->string('Author', 50);
+            $table->string('Genre', 50);
+            $table->integer('published_year')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('book_covers', 225);
-            $table->string('slug', 50);
-            $table->text('description');
-            $table->time('created_at'); // Assuming you want to store the time of creation
+            $table->string('Book_Covers', 225);
+            $table->string('slug', 50)->nullable();
+            $table->text('Description');
             $table->timestamps();
         });
     }
